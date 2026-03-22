@@ -1,0 +1,5 @@
+*.pdf
+
+my_book_images/
+
+__pycache__/
