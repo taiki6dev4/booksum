@@ -5,7 +5,7 @@ from datetime import datetime
 
 # ================= 設定エリア =================
 # 撮影したいページ数（少し多めに設定しても途中で止められます）
-TOTAL_PAGES = 200
+TOTAL_PAGES = 250
 
 # ページをめくってから撮影するまでの待ち時間（秒）
 # ※表示が遅いアプリなら 2.0 や 3.0 に増やしてください
@@ -46,8 +46,8 @@ def main():
         screenshot.save(file_path)
         print(f"[{i+1}/{TOTAL_PAGES}] 保存完了: {file_name}")
 
-        # 3. ページめくり（左矢印キー）
-        pyautogui.press('left')
+        # 3. ページめくり（左矢印キー） 適宜変える
+        pyautogui.press('right')
 
         # 4. 次のページが表示されるのを待つ
         time.sleep(INTERVAL)
